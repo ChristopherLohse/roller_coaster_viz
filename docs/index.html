@@ -1,7 +1,7 @@
 <!-- show a video in fullscreenn  from file-->
 <!-- set title for page-->
 <!-- set charset to utf-8-->
-
+<!DOCTYPE html>
 
 <!-- load stylesheet-->
 <link rel="stylesheet" href="style.css">
@@ -28,41 +28,47 @@
         <!-- <h1>Heading</h1>
         <p>Lorem ipsum...</p> -->
         <!-- Use a button to pause/play the video with JavaScript -->
-        <button id="myBtn" onclick="myFunction()">Pause</button>
+
+        <!-- add fast forward and backward button with symbols -->
+        <button id="backward" onclick="backward()">⏪</button>
+        <button id="myBtn" onclick="myFunction()"> ⏯️ </button> 
+        <button id="forward" onclick="forward()">⏩</button>
 
     </div>
 
 </body>
 
 <script>
-    function zoom() {
-        // zoom by 10%
+
+    // write function to forward and backward video
+    var btn = document.getElementById("myBtn");
+    function forward() {
         var video = document.getElementById("video");
-        video.style.width = (video.width * 1.1) + "px";
-        video.style.height = (video.height * 1.1) + "px";
+        video.currentTime += 1;
+        video.pause();
+        console.log(video.currentTime);
 
     }
-    function zoom_out() {
-        // zoom by 10%
-        var video = document.getElementById("video");
-        video.style.width = (video.width * 0.9) + "px";
-        video.style.height = (video.height * 0.9) + "px";
 
+    function backward() {
+        var video = document.getElementById("video");
+        video.currentTime -= 1;
     }
+
     // Get the video
     var video = document.getElementById("video");
 
     // Get the button
-    var btn = document.getElementById("myBtn");
+
 
     // Pause and play the video, and change the button text
     function myFunction() {
         if (video.paused) {
             video.play();
-            btn.innerHTML = "Pause";
+            // btn.innerHTML = "Pause";
         } else {
             video.pause();
-            btn.innerHTML = "Play";
+            // btn.innerHTML = "Play";
         }
     }
 

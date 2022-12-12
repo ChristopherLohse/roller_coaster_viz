@@ -38,4 +38,33 @@ body {
     background-color: #1CE6FE;
 }
 
-/* style zoom_in and zoom_out buttons plce next to myBtn*/
+/* style forward and back buttons */
+#forward {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #1BDA07;
+    color: #E81CDE;
+    cursor: pointer;
+}
+
+#forward:hover {
+    background: #E81CDE;
+    color: #1BDA07;
+}
+
+#backward {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #1BDA07;
+    color: #E81CDE;
+    cursor: pointer;
+}
+
+#backward:hover {
+    background: #E81CDE;
+    color: #1BDA07;
+}
