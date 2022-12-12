@@ -33,6 +33,10 @@
         <button id="backward" onclick="backward()">⏪</button>
         <button id="myBtn" onclick="myFunction()"> ⏯️ </button> 
         <button id="forward" onclick="forward()">⏩</button>
+        <button id="zoom_in" onclick="zoom_in()">🔍</button>
+        <button id="zoom_out" onclick="zoom_out()">🔎</button>
+        <!-- reset -->
+        <button id="reset" onclick="reset()">🔄</button>
 
     </div>
 
@@ -48,6 +52,49 @@
         video.pause();
         console.log(video.currentTime);
 
+    }
+
+    function reset() {
+        var video = document.getElementById("video");
+        // reset the width of the video
+        video.style.width = "100%";
+        // reset the height of the video
+        video.style.height = "100%";
+    }
+
+
+
+    function zoom_in() {
+        var video = document.getElementById("video");
+        // get the current width of the video
+        var width = video.clientWidth;
+        // get the current height of the video
+        var height = video.clientHeight;
+        // set the new width of the video
+        video.style.width = (width + 100) + "px";
+        // set the new height of the video
+        video.style.height = (height + 100) + "px";
+
+        // position in the middle
+        video.style.marginLeft = "auto";
+        video.style.marginRight = "auto";
+
+
+    }
+
+    // zoom out
+    function zoom_out() {
+        var video = document.getElementById("video");
+        // get the current width of the video
+        var width = video.clientWidth;
+        // get the current height of the video
+        var height = video.clientHeight;
+        // set the new width of the video
+        video.style.width = (width - 100) + "px";
+        // set the new height of the video
+        video.style.height = (height - 100) + "px";
+        video.style.marginLeft = "auto";
+        video.style.marginRight = "auto";
     }
 
     function backward() {

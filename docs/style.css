@@ -1,19 +1,28 @@
-/* Style the video: 100% width and height to cover the entire window  resize if needed*/
-#myVideo {
-    position: fixed;
+/* Style the video: 100% width and height to cover the entire window  resize if needed center it in */
+#video {
     right: 0;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 50%;
+    min-height: 50%;
+    width: 100%;
+    /* center in the page */
+    margin: auto;
+    z-index: -100;
+
 }
 
-/* Add some content at the bottom of the video/page */
+
+/* show the overflow */
+.container {
+    overflow: auto;
+}
+
 .content {
     position: fixed;
     bottom: 0;
     background: rgba(0, 0, 0, 0);
     color: #f1f1f1;
-    width: 100%;
+    width: 800%;
     padding: 20px;
 }
 
@@ -65,6 +74,56 @@ body {
 }
 
 #backward:hover {
+    background: #E81CDE;
+    color: #1BDA07;
+}
+
+/* zoom_in, zoon_out reset button */
+#zoom_in {
+    width: 100px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #1BDA07;
+    color: #E81CDE;
+    cursor: pointer;
+}
+
+/* add also hovertex */
+#zoom_in:hover {
+    background: #E81CDE;
+    color: #1BDA07;
+}
+
+#zoom_out {
+    width: 100px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #1BDA07;
+    color: #E81CDE;
+    cursor: pointer;
+}
+
+
+#zoom_out:hover {
+    background: #E81CDE;
+    color: #1BDA07;
+}
+
+
+#reset {
+    width: 100px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #1BDA07;
+    color: #E81CDE;
+    cursor: pointer;
+}
+
+
+#reset:hover {
     background: #E81CDE;
     color: #1BDA07;
 }
